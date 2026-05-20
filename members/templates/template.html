@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="{% static 'my_first.css' %}">
+</head>
+<body>
+
+<div class="mycard">
+  <h1>Members</h1>
+  <ul>
+    {% for x in fruits %}
+      <li>{{ x }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+</body>
+</html>
