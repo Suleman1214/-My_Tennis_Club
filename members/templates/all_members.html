@@ -11,6 +11,7 @@
     <ul>
       {% for x in mymembers %}
        <li onclick="window.location = 'details/{{ x.slug }}'">{{ x.firstname }} {{ x.lastname }}</li>
+      {% endfor %}
     </ul>
   </div>
 {% endblock %}

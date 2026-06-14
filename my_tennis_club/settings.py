@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'members',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -82,12 +83,15 @@ WSGI_APPLICATION = 'my_tennis_club.wsgi.application'
 
 
 
+# my_tennis_club/settings.py
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
 # ======
 # DATABASES = {
 #     'default': dj_database_url.config(
